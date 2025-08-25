@@ -1,0 +1,30 @@
+{% import '_includes/forms' as forms %}
+
+{{ forms.textField({
+  first: true,
+  label: 'Sidebar label' | t('_embed-iframe'),
+  instructions: 'Text shown in the CP navigation.' | t('_embed-iframe'),
+  id: 'navLabel',
+  name: 'navLabel',
+  value: settings.navLabel,
+  required: true,
+}) }}
+
+{{ forms.textField({
+  type: 'url',
+  label: 'Embed URL' | t('_embed-iframe'),
+  instructions: 'Paste the HTTPS URL to embed.' | t('_embed-iframe'),
+  id: 'embedUrl',
+  name: 'embedUrl',
+  value: settings.embedUrl,
+  placeholder: 'https://example.com',
+  required: true,
+}) }}
+
+{{ forms.lightswitchField({
+  label: 'Allow same-origin (cookies/localStorage)' | t('_embed-iframe'),
+  instructions: 'Enable if the embedded site needs cookies or localStorage. Reduces sandbox isolation.' | t('_embed-iframe'),
+  id: 'sandboxSameOrigin',
+  name: 'sandboxSameOrigin',
+  on: settings.sandboxSameOrigin,
+}) }}
