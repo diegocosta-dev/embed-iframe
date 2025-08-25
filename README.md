@@ -34,7 +34,7 @@ Run the following commands in your terminal:
 cd /path/to/my-project
 
 # Add the plugin via Composer
-ddev composer require diego-costa/embed-iframe:dev-main
+ddev composer require diego-costa/craft-embed-iframe:dev-main
 
 # Install the plugin in Craft CMS
 ddev craft plugin/install _embed-iframe
